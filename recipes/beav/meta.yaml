@@ -1,0 +1,33 @@
+{% set name = "beav" %}
+{% set version = "0.0.1" %}
+{% set sha256 = "f45ae94f1fac1ea732ee10d9ba4607186401881da7c1f66c32f4a482bc3879f9"%}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  url: https://github.com/weisberglab/{{ name }}/archive/v{{ version }}.tar.gz
+  sha256: {{ sha256 }}
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - python
+  run: 
+    - bakta
+    - hmmer
+test:
+  commands:
+    - beav
+
+about:
+  home: https://github.com/weisberglab/beav
+  license: GPL
+  summary: "beav: Bacterial Element Annotation reVamped"
+
+extra:
+  identifiers:
+    - doi:none
