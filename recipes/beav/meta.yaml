@@ -1,6 +1,6 @@
 {% set name = "beav" %}
-{% set version = "0.0.1" %}
-{% set sha256 = "f45ae94f1fac1ea732ee10d9ba4607186401881da7c1f66c32f4a482bc3879f9"%}
+{% set version = "0.0.2" %}
+{% set sha256 = "7278f73aaaa3af20f18e7b17cd43c4ec20c966a6495ef11bd19ebaa470c5e8b2"
 
 package:
   name: {{ name }}
