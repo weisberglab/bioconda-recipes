@@ -1,6 +1,6 @@
 {% set name = "beav" %}
 {% set version = "0.0.2" %}
-{% set sha256 = "7278f73aaaa3af20f18e7b17cd43c4ec20c966a6495ef11bd19ebaa470c5e8b2"
+{% set sha256 = "7278f73aaaa3af20f18e7b17cd43c4ec20c966a6495ef11bd19ebaa470c5e8b2" %}
 
 package:
   name: {{ name }}
@@ -16,19 +16,40 @@ build:
 requirements:
   build:
     - python
-  run: 
-    - bakta
+    - perl >=5.16.3
+  run:
+    - hmmer >=3.3.2
+    - bakta >=1.6
     - integron_finder
     - macsyfinder
     - fastani
-    - antismash
-    - hmmer
     - emboss
+    - blast >=2.6.0
+    - prokka >=1.11
+    - bedtools >=2.27.1
+    - trnascan-se >=2.0.2
+    - cmscan >=1.1.2
     - blast-legacy
     - bbmap
+    - tqdm
+    - collections
+    - numpy
+    - biopython
+    - sklearn
+    - pandas
+    - argparse
+    - gzip
+    - perl-dbi
+    - perl-findbin
+    - perl-getopt-long
+    - perl-list-util
+    - perl-dbd-sqlite
+    - perl-file-spec
+    - perl-cwd
+    - perl-ipc-run3
 test:
   commands:
-    - beav
+    - run_tests.sh
 
 about:
   home: https://github.com/weisberglab/beav
