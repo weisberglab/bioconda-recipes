@@ -1,6 +1,6 @@
 {% set name = "beav" %}
-{% set version = "0.0.2" %}
-{% set sha256 = "7278f73aaaa3af20f18e7b17cd43c4ec20c966a6495ef11bd19ebaa470c5e8b2" %}
+{% set version = "0.0.3" %}
+{% set sha256 = "0d63773ae00eaf51a7525f4883151c5cf798ccdc18f53d410b85d8fb59ba2e64" %}
 
 package:
   name: {{ name }}
@@ -16,7 +16,7 @@ build:
 requirements:
   build:
     - python
-    - perl >=5.16.3
+    - perl >=5.22.0
   run:
     - hmmer >=3.3.2
     - bakta >=1.6
@@ -28,24 +28,20 @@ requirements:
     - prokka >=1.11
     - bedtools >=2.27.1
     - trnascan-se >=2.0.2
-    - cmscan >=1.1.2
+    - infernal >=1.1.2
     - blast-legacy
     - bbmap
     - tqdm
-    - collections
     - numpy
     - biopython
-    - sklearn
+    - scikit-learn
     - pandas
-    - argparse
     - gzip
     - perl-dbi
     - perl-findbin
     - perl-getopt-long
-    - perl-list-util
     - perl-dbd-sqlite
     - perl-file-spec
-    - perl-cwd
     - perl-ipc-run3
 test:
   commands:
@@ -54,7 +50,7 @@ test:
 about:
   home: https://github.com/weisberglab/beav
   license: GPL
-  summary: "beav: Bacterial Element Annotation reVamped"
+  summary: "beav: Bacterial genome and mobile element annotation pipeline"
 
 extra:
   identifiers:
